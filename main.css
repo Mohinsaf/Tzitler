@@ -1,13 +1,42 @@
-body{
+.container{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	align-items: center;
+
+}
+
+#new, #feed{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #1DA1F2;
+	width: 70vw;
 }
 
 #new{
-	display: flex;
-	justify-content: center;
-	background-color: gray;
-	height: 100px;
-	width: 250px; 
+	height: 100px; 
 }
+
+#btn{
+	height:30px;
+	width: 60px;
+}
+#feed {
+	flex-direction: column-reverse;
+	justify-content: none;
+	align-items: center;
+	background-color: #AAB8C2;
+
+}
+
+#twt {
+	background-color: white;
+	margin: 3px 3px;
+	width: 400px;
+	min-height: 50px;
+	font-family: Helvetica;
+	border-radius: 4px;
+	padding: 15px 5px 5px 5px;
+}
+
