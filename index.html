@@ -11,6 +11,11 @@
       <textarea id="input"></textarea>
       <button id="btn">Tweet</button>
       </div>
+      <div id="login">
+      <input type="text" name="login" id="loginUser">     
+       <button id="btn2">Sign in</button>
+      </div>
+
       <div id="feed">
         
       </div>
@@ -27,7 +32,7 @@
         while(index >= 0){
           var tweet = streams.home[index];
           var $tweet = $('<div id="twt"></div>');
-          $tweet.text('@' + tweet.user + ': ' + tweet.message);
+          $tweet.html('<span id="us">@' + tweet.user + ': </span><hr> ' + tweet.message);
           $tweet.appendTo($body);
           index -= 1;
         }
@@ -36,5 +41,6 @@
 
     </script>
     <script src="tweet.js"></script>
+    <script src="login.js"></script>
   </body>
 </html>
