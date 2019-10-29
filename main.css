@@ -1,3 +1,8 @@
+body {
+	margin: 0 0;
+	background-color: #F5F8FA;
+}
+
 .container{
 	display: flex;
 	flex-direction: column;
@@ -6,7 +11,8 @@
 
 }
 
-#new, #feed{
+#new, #feed, #login{
+	padding: 10px 10px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -14,8 +20,28 @@
 	width: 70vw;
 }
 
+#btn, #btn2{
+	border-radius: 15px;
+	color:#1DA1F2;
+	background-color: white;
+	border:none;
+	margin-left: 20px;
+}
+
+input, textarea{
+	border-radius: 5px;
+	background-color: #F5F8FA;
+	color: #14171A;
+	border:none;
+}
+
+#login {	
+	height: 100px; 
+}
+
 #new{
 	height: 100px; 
+	display: none;
 }
 
 #btn{
@@ -26,7 +52,7 @@
 	flex-direction: column-reverse;
 	justify-content: none;
 	align-items: center;
-	background-color: #AAB8C2;
+	background-color: #E1E8ED;
 
 }
 
@@ -40,3 +66,7 @@
 	padding: 15px 5px 5px 5px;
 }
 
+#us {
+	color: #657786;
+	font-size: 13px;
+}
