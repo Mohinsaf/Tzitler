@@ -6,24 +6,33 @@
     <script src="data_generator.js"></script>
   </head>
   <body>
-    <div id="new">
+    <div class="container">
+      <div id="new">
       <textarea id="input"></textarea>
       <button id="btn">Tweet</button>
-    </div>
+      </div>
+      <div id="login">
+      <input type="text" name="login" id="loginUser">     
+       <button id="btn2">Sign in</button>
+      </div>
 
+      <div id="feed">
+        
+      </div>
+    </div>
 
 
     <script>
 
       $(document).ready(function(){
-        var $body = $('body');
+        var $body = $('#feed');
         
 
         var index = streams.home.length - 1;
         while(index >= 0){
           var tweet = streams.home[index];
-          var $tweet = $('<div></div>');
-          $tweet.text('@' + tweet.user + ': ' + tweet.message);
+          var $tweet = $('<div id="twt"></div>');
+          $tweet.html('<span id="us">@' + tweet.user + ': </span><hr> ' + tweet.message);
           $tweet.appendTo($body);
           index -= 1;
         }
@@ -31,5 +40,7 @@
       });
 
     </script>
+    <script src="tweet.js"></script>
+    <script src="login.js"></script>
   </body>
 </html>
